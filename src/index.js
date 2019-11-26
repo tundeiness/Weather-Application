@@ -1,13 +1,219 @@
 import 'whatwg-fetch';
 import 'bootstrap';
-import app from './app';
+// import clear from './clearInput';
+// import render from './renderWeather';
+// import { celsius, fahrenheit } from './convertTemp';
+// import app from './app';
+// import weather from './renderWeather';
+// import search from './search';
+// import weather from './renderWeather';
 
-const apps = app();
-const test = document.querySelector('icon');
-test.appendChild(apps);
+// const searches = search();
+// const apps = app();
+
+// const weather = weather();
+
+// let setTemp = document.getElementById("set-temp");
+// document.querySelector("#searchForm").addEventListener("submit", getWeather);
+
+// const CURRENT_LOCATION = document.getElementsByClassName('weather-content__overview')[0];
+// const CURRENT_TEMP = document.getElementsByClassName('weather-content__temp')[0];
+// const FORECAST = document.getElementsByClassName('component__forecast-box')[0];
+const APIKEY = '3f1649f8b9563002df71974391b99f2e';
+// const loc = document.getElementById('search').value;
+// const appid = 'your-app-id';
+const url = `http://api.openweathermap.org/data/2.5/weather?q=london&APPID=${APIKEY}`;
+// Use Fetch API to GET data from OpenWeather API
+// return json
+function getWeatherData() {
+  const headers = new Headers();
+  // const URL = `https://api.openweathermap.org/data/2.5/forecast/daily?${position}&cnt=7&units=imperial&APPID=${appid}`;
+
+
+  fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    headers,
+  }).then((resp) => resp.json())
+    .then((data) => {
+      // console.log(data);
+      document.getElementById('desc-item').innerHTML = data.weather[0].description;
+      document.getElementById('temp-item').innerHTML = data.main.temp;
+      document.getElementById('wind-item').innerHTML = data.wind.speed;
+      document.getElementById('humid-item').innerHTML = data.main.humidity;
+      document.getElementById('loc-item').innerHTML = data.name;
+    })
+    .catch(
+      (err) => console.log(JSON.stringify(err)),
+    );
+  //   cleared();
+}
+
+getWeatherData();
+
+// TUTORIAL READERS:
+// yeah, using an external resource for the icons and applying them here using a switch block
+// function applyIcon(icon) {
+//   let selectedIcon;
+//   switch (icon) {
+//     case '01d':
+//       selectedIcon = 'wi-day-sunny';
+//       break;
+//     case '01n':
+//       selectedIcon = 'wi-night-clear';
+//       break;
+//     case '02d':
+//     case '02n':
+//       selectedIcon = 'wi-cloudy';
+//       break;
+//     case '03d':
+//     case '03n':
+//     case '04d':
+//     case '04n':
+//       selectedIcon = 'wi-night-cloudy';
+//       break;
+//     case '09d':
+//     case '09n':
+//       selectedIcon = 'wi-showers';
+//       break;
+//     case '10d':
+//     case '10n':
+//       selectedIcon = 'wi-rain';
+//       break;
+//     case '11d':
+//     case '11n':
+//       selectedIcon = 'wi-thunderstorm';
+//       break;
+//     case '13d':
+//     case '13n':
+//       selectedIcon = 'wi-snow';
+//       break;
+//     case '50d':
+//     case '50n':
+//       selectedIcon = 'wi-fog';
+//       break;
+//     default:
+//       selectedIcon = 'wi-meteor';
+//   }
+//   return selectedIcon;
+// }
+
+// Use returned json from promise to render daily forecast
+// renderData = (location, forecast) => {
+// render city, current weather description and temp
+// const currentWeather = forecast[0].weather[0];
+// const widgetHeader = `<h1>${location.name}</h1><small>${currentWeather.description}</small>`;
+// CURRENT_TEMP.innerHTML = `<i class="wi ${applyIcon(currentWeather.icon)}"></i> ${Math.round(forecast[0].temp.day)} <i class="wi wi-degrees"></i>`;
+// CURRENT_LOCATION.innerHTML = widgetHeader;
+
+// render each daily forecast
+// forecast.forEach((day) => {
+//   const date = new Date(day.dt * 1000);
+//   const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+//   const name = days[date.getDay()];
+//   const dayBlock = document.createElement('div');
+//   dayBlock.className = 'forecast__item';
+//   dayBlock.innerHTML = `<div class="forecast-item__heading">${name}</div>
+//     <div class="forecast-item__info"><i class="wi ${applyIcon(day.weather[0].icon)}"></i> <span class="degrees">${Math.round(day.temp.day)}<i class="wi wi-degrees"></i></span></div>`;
+//   FORECAST.appendChild(dayBlock);
+// });
+// };
+
+// TUTORIAL reader: I moved the calling of the weather API url
+// to be able to get the current browser location
+// if ('geolocation' in navigator) {
+// navigator.geolocation.getCurrentPosition((position) => {
+// 	const coordinates = `lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+// run/render the widget data
+//     getWeatherData(coordinates).then((weatherData) => {
+//       const { city } = weatherData;
+//       const dailyForecast = weatherData.list;
+
+//       renderData(city, dailyForecast);
+//     });
+//   });
+// } else {
+
+// }
+
+
+// function getData() {
+//   const cleared = clear();
+//   const renders = render();
+//   const APIKEY = '3f1649f8b9563002df71974391b99f2e';
+//   const loc = document.getElementById('search').value;
+//   const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${APIKEY}`;
+
+//   fetch(url, { mode: 'cors' })
+//     .then((resp) => resp.json())
+//     .then((data) => {
+//       console.log(data);
+//       celsius(data.main.temp);
+//       fahrenheit(data.main.temp);
+//       renders(data);
+//     })
+//     .catch(
+//       (err) => console.log(JSON.stringify(err)),
+//     );
+//   cleared();
+// }
+// getData();
+
+
+// function drawWeather(d) {
+//   // const celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+//   // const fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+//   // const { description } = d.weather[0];
+
+//   // document.getElementById('desc-item').innerHTML = description;
+//   // document.getElementById('temp-item').innerHTML = `${celcius}&deg;`;
+//   // document.getElementById('loc-item').innerHTML = d.name;
+
+//   // if (description.indexOf('rain') > 0) {
+//   // document.body.className = 'rainy';
+//   // } else if (description.indexOf('cloud') > 0) {
+//   // document.body.className = 'cloudy';
+//   // } else if (description.indexOf('sunny') > 0) {
+//   // document.body.className = 'sunny';
+//   // } else {
+//   // document.body.className = 'clear';
+//   // }
+// }
+
+
+// function weatherBallon(url) {
+//   // const APIKEY = '3f1649f8b9563002df71974391b99f2e';
+//   // const loc = document.getElementById('search').value;
+//   fetch(url, { mode: 'cors' })
+//     .then((resp) => resp.json()) // Convert data to json
+//     .then((data) => {
+//       drawWeather(data);
+//     })
+//     .catch(() => {
+//       // catch any errors
+//     });
+// }
+
+
+// const description = document.querySelector('desc-item');
+
+// const icon = document.querySelector('icon-item');
+// const temperature = document.querySelector('temp-item');
+// const wind = document.querySelector('wind-item');
+// const humidity = document.querySelector('humid-item');
+// const location = document.querySelector('loc-item');
+// const input = document.querySelector('input-item');
+// document.addEventListener('DOMContentLoaded', searches.init());
+
+
+// const temperature = document.querySelector('temp-item');
+// const temperature = document.querySelector('temp-item');
+// const temperature = document.querySelector('temp-item');
+
 // console.log(apps);
 // import './style.css';
-// const getUrl = (url) => new Promise(((resolve, reject) => {
+// import weather from './renderWeather';
+// const getUrl = (url) => new Promise(((resolve, reject) => {}
 //   const xhttp = new XMLHttpRequest();
 //   xhttp.open('GET', url, true);
 //   xhttp.onload = () => {

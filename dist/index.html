@@ -16,7 +16,7 @@
           border" id="content-box">
             <div class="heading"><h2>Daily Weather</h2></div>
             <div class="icon-description d-flex flex-row justify-content-center">
-                <div class=" p-4 border" id="icon-item">Icon item 1</div>
+                <!-- <div class=" p-4 border" id="icon-item">Icon item 1</div> -->
                 <div class="  p-4 border" id="desc-item">Desc item 2</div>
             </div>
             <div class="temperature d-flex flex-column justify-content-center">
@@ -36,8 +36,13 @@
                 <div class="border" id="loc-item">location</div>
             </div>
             <div class="search d-flex flex-column justify-content-center">
-                <div class="border" id="input-item">input</div>
-                <div class="border" id="search-item">search</div>
+                <div class="border" id="input-item">
+                  <form>
+                    <!-- <label for="search">Search</label> -->
+                    <input id="search" type='search'/>
+                  </form>
+                </div>
+                <button class="border" id="search-item">search</button>
             </div>
           </div>
 

@@ -1,23 +1,52 @@
-/* eslint-disable max-len */
 
 // const baseUrl = 'https://fcc-weather-api.glitch.me/';
 // const tailUrl = `api/current?lon=${lon}&lat=${lat}`;
 // const webLink = baseUrl + tailUrl;
 // const APPID = '3f1649f8b9563002df71974391b99f2e';
-// const completeAPI = `api.openweathermap.org/data/2.5/weather?q=${location},${country}&APPID=${APPID}`;
-// const location, country;
-const fetchData = () => {
-  // const img = document.querySelector('img');
-  fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3f1649f8b9563002df71974391b99f2e', { mode: 'cors' })
-    .then((response) => {
-      const data = response.json(); return data;
-    })
-    .then((data) => {
-      const iconData = data.weather[0].icon;
-      console.log(iconData);
-      return iconData;
-    });
-};
+// const completeAPICall = `api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${APPID}`;
+
+
+// document.addEventListener('DOMContentLoaded', search.init());
+
+// const fetchData = () => ({
+
+//   renderWeather(input) {
+//     const celcius = Math.round(parseFloat(input.main.temp) - 273.15);
+//     const fahrenheit = Math.round(((parseFloat(input.main.temp) - 273.15) * 1));
+
+//     document.getElementById('descrpition').innerHTML = input.weather[0].description;
+//     document.getElementById('temp').innerHTML = `${celcius}&deg`;
+//     document.getElementById('location').innerHTML = input.name;
+//   },
+
+// });
+
+
+// const fetchData = () => {
+//   fetch(search.init(), { mode: 'cors' })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       drawWeather(data); // Call drawWeather
+//       // console.log(data);
+//     })
+//     .catch((err) => {
+//       // catch any errors
+//       console.log(err);
+//     });
+// };
+
+
+// https://media.giphy.com/media/t7Qb8655Z1VfBGr5XB/giphy.gif --> rainy
+// https://media.giphy.com/media/KV1s4kSJHaY3m/giphy.gif --> sunny
+// https://media.giphy.com/media/G7XzhrnRdxNjW/giphy.gif --> cloudy
+// https://media.giphy.com/media/SbtjVFeZJbb44/giphy.gif --> snowy
+// https://media.giphy.com/media/xTiTnGmU99wLFvZBfy/giphy.gif --> snowy 2
+// https://media.giphy.com/media/xT0wlvGLHmojbeu5vq/giphy.gif --> hot weather
+// https://media.giphy.com/media/5RHAxkNRlLPjy/giphy.gif --> windy
+// https://media.giphy.com/media/13ZEwDgIZtK1y/giphy.gif --> stormy
+// https://media.giphy.com/media/PIh4laWJlz9bq/giphy.gif --> partly cloudy
+
+// 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3f1649f8b9563002df71974391b99f2e'
 // fetchData();
 
 
@@ -89,5 +118,3 @@ const fetchData = () => {
 //   });
 // }
 // });
-
-export default fetchData;
