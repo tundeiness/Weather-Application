@@ -49,6 +49,14 @@ body {
   border-radius: .8rem;
 }
 
+.heading{
+  color: grey;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
 
 .icon-description{
   border: 1px solid white;
@@ -138,11 +146,19 @@ body {
   line-height: 80%;
 }
 
+#unit{
+  display: inline;
+}
+
 #windText{
   /* border: 1px solid red; */
   background: white;
   margin-top: 1px;
   text-transform: capitalize;
+}
+
+.covering{
+  margin-left: 1.3rem;
 }
 
 #humid-item{

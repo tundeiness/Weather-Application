@@ -1,16 +1,49 @@
 import 'whatwg-fetch';
 import 'bootstrap';
 import defaultDisplay from './defaultWeather';
+import locationWeather from './renderWeather';
 
 const defData = defaultDisplay();
-function getValue() {
-  const input = document.getElementById('inputText');
-  return input;
-}
+const weather = locationWeather();
 
-console.log(getValue());
-defData();
 
+document.getElementById('submit').addEventListener('click', (evt) => {
+  // evt.preventDefault();
+  const cityname = document.querySelector('#inputText').value;
+  let target = true;
+  // console.log(cityname);
+
+  // const APIKEY = '3f1649f8b9563002df71974391b99f2e';
+  // const loc = document.getElementById('search').value;
+  // const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&APPID=${APIKEY}`;
+
+  // fetch(url, { mode: 'cors' })
+  //   .then((resp) => resp.json())
+  //   .then((data) => {
+  //     console.log(data);
+  //   })
+  //   .catch(
+  //     (err) => console.log(JSON.stringify(err)),
+  //   );
+
+  if (target) {
+    target = false;
+    weather(cityname);
+  } else {
+    defData();
+  }
+
+
+  // document.querySelector('#inputText').value = '';
+});
+
+
+// document.getElementById('togBtn').addEventListener("click", (event) {
+//   event.preventDefault();
+// });
+
+
+// console.log(input);
 // import clear from './clearInput';
 // import render from './renderWeather';
 // import { celsius, fahrenheit } from './convertTemp';
