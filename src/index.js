@@ -6,11 +6,16 @@ import locationWeather from './renderWeather';
 const defData = defaultDisplay();
 const weather = locationWeather();
 
+window.addEventListener('load', (evnt) {
+  evnt.preventDefault();
+  defData();
+})
+
 
 document.getElementById('submit').addEventListener('click', (evt) => {
   // evt.preventDefault();
   const cityname = document.querySelector('#inputText').value;
-  let target = true;
+  //let target = true;
   // console.log(cityname);
 
   // const APIKEY = '3f1649f8b9563002df71974391b99f2e';
@@ -26,15 +31,8 @@ document.getElementById('submit').addEventListener('click', (evt) => {
   //     (err) => console.log(JSON.stringify(err)),
   //   );
 
-  if (target) {
-    target = false;
     weather(cityname);
-  } else {
-    defData();
-  }
-
-
-  // document.querySelector('#inputText').value = '';
+   document.querySelector('#inputText').value = '';
 });
 
 
