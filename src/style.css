@@ -58,46 +58,166 @@ body {
   margin-bottom: .7rem;
 }
 
+#desc-item{
+
+}
+
+#desc{
+  /* font-size: large; */
+  font-stretch: expanded;
+  font-weight: bold;
+  color: black;
+  /* font-family: 'Coda Caption', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
+  /* letter-spacing: .1rem; */
+  /* text-transform: uppercase; */
+  display: block;
+}
+
+#fullDesc{
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  /* font-stretch: expanded; */
+  letter-spacing: .2rem;
+  margin-top: 1rem;
+}
+
 .temperature{
   border: 1px solid red;
 }
 
+.valTemp{
+
+}
+
+.togContainer{
+
+}
+
 #temp-item{
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  /* margin-top: .5rem;
+  margin-bottom: .5rem; */
+  padding-top: 1rem;
+  /* padding-bottom: .8rem; */
+}
+
+#tempValue{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
 }
 
 #toggle-item{
-  margin-bottom: .5rem;
-  padding-top: .2rem;
+  /* margin-bottom: .5rem; */
+  /* padding-top: .2rem; */
   padding-bottom: .2rem;
 }
 
 
 .wind-humid{
-  border: 1px solid whitesmoke;
+  /* border: 1px solid whitesmoke; */
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: .7rem;
   margin-bottom: .2rem;
 }
 
+#wind-item{
+
+}
+
+.windCont{
+  width: 8rem;
+}
+
+#windValue{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
+}
+
+#windText{
+  /* border: 1px solid red; */
+  background: white;
+  margin-top: 1px;
+  text-transform: capitalize;
+}
+
+#humid-item{
+
+}
+
+#humidValue{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
+}
+
+#humidText{
+  /* border: 1px solid red; */
+  background: white;
+  margin-top: 1px;
+  text-transform: capitalize;
+}
+
+.humidCont{
+  width: 8rem;
+}
 
 .location{
   border: 1px solid white;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: .7rem;
+  margin-bottom: .1rem;
 }
+
+.locCont{
+  margin-top: .5rem;
+}
+
+#loc-name{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
+}
+
+
 
 .search{
   border: 1px solid whitesmoke;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: .7rem;
-  margin-bottom: .2rem;
+  /* margin-top: .1rem; */
+  margin-bottom: 1.5rem;
+  /* width: 92%; */
+}
+
+
+input[type=text]{
+  width: 100%;
+  margin-top: .5rem;
+  height: 2.5rem;
+}
+
+input[type=submit] {
+  background-color: powderblue;
+  color: black;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: .3rem;
+  margin-bottom: .5rem;
+}
+
+input[type=submit]:hover {
+  background-color: #2196F3;
+}
+
+#inputText{
 
 }
 

@@ -1,5 +1,16 @@
 import 'whatwg-fetch';
 import 'bootstrap';
+import defaultDisplay from './defaultWeather';
+
+const defData = defaultDisplay();
+function getValue() {
+  const input = document.getElementById('inputText');
+  return input;
+}
+
+console.log(getValue());
+defData();
+
 // import clear from './clearInput';
 // import render from './renderWeather';
 // import { celsius, fahrenheit } from './convertTemp';
@@ -19,37 +30,6 @@ import 'bootstrap';
 // const CURRENT_LOCATION = document.getElementsByClassName('weather-content__overview')[0];
 // const CURRENT_TEMP = document.getElementsByClassName('weather-content__temp')[0];
 // const FORECAST = document.getElementsByClassName('component__forecast-box')[0];
-const APIKEY = '3f1649f8b9563002df71974391b99f2e';
-// const loc = document.getElementById('search').value;
-// const appid = 'your-app-id';
-const url = `http://api.openweathermap.org/data/2.5/weather?q=london&APPID=${APIKEY}`;
-// Use Fetch API to GET data from OpenWeather API
-// return json
-function getWeatherData() {
-  const headers = new Headers();
-  // const URL = `https://api.openweathermap.org/data/2.5/forecast/daily?${position}&cnt=7&units=imperial&APPID=${appid}`;
-
-
-  fetch(url, {
-    method: 'GET',
-    mode: 'cors',
-    headers,
-  }).then((resp) => resp.json())
-    .then((data) => {
-      // console.log(data);
-      document.getElementById('desc-item').innerHTML = data.weather[0].description;
-      document.getElementById('temp-item').innerHTML = data.main.temp;
-      document.getElementById('wind-item').innerHTML = data.wind.speed;
-      document.getElementById('humid-item').innerHTML = data.main.humidity;
-      document.getElementById('loc-item').innerHTML = data.name;
-    })
-    .catch(
-      (err) => console.log(JSON.stringify(err)),
-    );
-  //   cleared();
-}
-
-getWeatherData();
 
 // TUTORIAL READERS:
 // yeah, using an external resource for the icons and applying them here using a switch block
