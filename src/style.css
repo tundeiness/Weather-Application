@@ -111,7 +111,13 @@ body {
   /* padding-bottom: .8rem; */
 }
 
-#tempValue{
+#tempValueC{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  line-height: 80%;
+}
+
+#tempValueF{
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
   line-height: 80%;
