@@ -1,39 +1,73 @@
 import 'whatwg-fetch';
 import 'bootstrap';
 import defaultDisplay from './defaultWeather';
-
-
-const defData = defaultDisplay();
-// const weather = locationWeather();
+import { getWeather } from './getWeather';
 
 // window.addEventListener('load', (evnt) {
+
 //   evnt.preventDefault();
 
 // })
+
+const subButton = document.getElementById('submit');
+subButton.addEventListener('click', () => {
+  console.log('something');
+});
+
+// console.log(subButton);
+const defData = defaultDisplay();
+// const weather = locationWeather();
+
 defData();
 
-document.getElementById('submit').addEventListener('click', (evt) => {
-  // evt.preventDefault();
-  // const cityname = document.querySelector('#inputText').value;
-  // let target = true;
-  // console.log(cityname);
 
-  // const APIKEY = '3f1649f8b9563002df71974391b99f2e';
-  // const loc = document.getElementById('search').value;
-  // const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&APPID=${APIKEY}`;
+// const txt = document.getElementById('inputText');
+// txt.addEventListener('input', () => {
+//   console.log(txt.value);
+// });
 
-  // fetch(url, { mode: 'cors' })
-  //   .then((resp) => resp.json())
-  //   .then((data) => {
-  //     console.log(data);
-  //   })
-  //   .catch(
-  //     (err) => console.log(JSON.stringify(err)),
-  //   );
+// document.getElementById('submit').addEventListener('click', () => {
+// evt.preventDefault();
 
 
-  // document.querySelector('#inputText').value = '';
-});
+function getInput() {
+  const userInput = document.getElementById('inputText').value;
+  console.log(userInput);
+}
+
+// const mainBox = document.getElementById('content-box');
+// mainBox.remove();
+
+// const cityName = document.querySelector('input[name="input"]').value;
+// console.log(cityName);
+
+// const cityName = document.getElementById('inputText').value;
+//  const cityName = document.querySelector('input[name="input"]').value;
+//  console.log(cityName);
+
+// mainBox.appendChild();
+
+// getWeather(cityName);
+// const cityname = document.querySelector('#inputText').value;
+// let target = true;
+// console.log(cityname);
+
+// const APIKEY = '3f1649f8b9563002df71974391b99f2e';
+// const loc = document.getElementById('search').value;
+// const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&APPID=${APIKEY}`;
+
+// fetch(url, { mode: 'cors' })
+//   .then((resp) => resp.json())
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch(
+//     (err) => console.log(JSON.stringify(err)),
+//   );
+
+
+// document.querySelector('#inputText').value = '';
+// });
 
 
 // document.getElementById('togBtn').addEventListener("click", (event) {
@@ -224,7 +258,8 @@ document.getElementById('submit').addEventListener('click', (evt) => {
 // console.log(apps);
 // import './style.css';
 // import weather from './renderWeather';
-// const getUrl = (url) => new Promise(((resolve, reject) => {}
+// import getWeather from './weather';
+
 //   const xhttp = new XMLHttpRequest();
 //   xhttp.open('GET', url, true);
 //   xhttp.onload = () => {
