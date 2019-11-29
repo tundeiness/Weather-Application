@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+
 export default function getImage(data) {
   if (data.weather[0].main === 'Rain') {
     const obj = document.getElementById('content-box');
@@ -31,6 +31,10 @@ export default function getImage(data) {
   } else if (data.weather[0].main === 'Drizzle') {
     const obj = document.getElementById('content-box');
     obj.style.background = 'url(https://media.giphy.com/media/QPsEnRasf0Vfa/giphy.gif)';
+    obj.style.backgroundSize = 'cover';
+  } else if (data.weather[0].main === 'Fog') {
+    const obj = document.getElementById('content-box');
+    obj.style.background = 'url(https://media.giphy.com/media/l3q2uVE4AB4YylwNG/giphy.gif)';
     obj.style.backgroundSize = 'cover';
   } else {
     const obj = document.getElementById('content-box');

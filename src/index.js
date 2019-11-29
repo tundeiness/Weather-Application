@@ -10,8 +10,12 @@ import { getWeather } from './getWeather';
 // })
 
 const subButton = document.getElementById('submit');
-subButton.addEventListener('click', () => {
-  console.log('something');
+subButton.addEventListener('click', (evnt) => {
+  evnt.preventDefault();
+  const txt = document.getElementById('inputText').value;
+  console.log(txt);
+  const mainBox = document.getElementById('content-box');
+  mainBox.remove();
 });
 
 // console.log(subButton);
@@ -30,10 +34,10 @@ defData();
 // evt.preventDefault();
 
 
-function getInput() {
-  const userInput = document.getElementById('inputText').value;
-  console.log(userInput);
-}
+// function getInput() {
+//   const userInput = document.getElementById('inputText').value;
+//   console.log(userInput);
+// }
 
 // const mainBox = document.getElementById('content-box');
 // mainBox.remove();

@@ -143,7 +143,9 @@ body {
 }
 
 .windCont{
-  width: 8rem;
+  width: 100%;
+  border-top: none !important;
+  border-right: none !important;
 }
 
 #windValue{
@@ -161,10 +163,11 @@ body {
   background: white;
   margin-top: 1px;
   text-transform: capitalize;
+  /* letter-spacing: 2rem; */
 }
 
 .covering{
-  margin-left: 1.3rem;
+  margin-left: 3rem;
 }
 
 #humid-item{
@@ -185,7 +188,9 @@ body {
 }
 
 .humidCont{
-  width: 8rem;
+  width: 100%;
+  border-top: none !important;
+  border-left: none !important;
 }
 
 .location{
