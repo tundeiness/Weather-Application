@@ -12,6 +12,18 @@ const toggleCel = (cityName) => {
     .then((data) => {
       const cel = Math.round(parseFloat(data.main.temp));
       document.getElementById('temp-item').innerHTML = `<p class="font-weight-bold text-center" id="tempValue">${cel}&deg</p>`;
+
+
+      <form>
+                <div class=" d-flex flex-column justify-content-center" id="input-item">
+                  <div class="searchCont">
+                    <input type='text' name = "input" placeholder="City name e.g Lusaka" id="inputText"/>
+                  </div>
+                  <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                  </div>
+                </div>
+              </form>
     }).catch(
       (err) => console.log(JSON.stringify(err)),
     );

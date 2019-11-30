@@ -113,8 +113,6 @@ const defaultData = (() => {
       flexCont.appendChild(temperature);
       flexCont.appendChild(windHumid);
       flexCont.appendChild(location);
-
-
       getImage(data);
     })
     .catch(
