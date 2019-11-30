@@ -1,7 +1,8 @@
 import 'whatwg-fetch';
 import 'bootstrap';
-import defaultDisplay from './defaultWeather';
-import { getWeather } from './getWeather';
+// import defaultDisplay from './defaultWeather';
+// import getWeather from './getWeather';
+import defaultDisplay from './default';
 
 // window.addEventListener('load', (evnt) {
 
@@ -11,17 +12,28 @@ import { getWeather } from './getWeather';
 
 const subButton = document.getElementById('submit');
 subButton.addEventListener('click', (evnt) => {
-  evnt.preventDefault();
-  const txt = document.getElementById('inputText').value;
-  console.log(txt);
-  const mainBox = document.getElementById('content-box');
-  mainBox.remove();
+  // evnt.preventDefault();
+  // const txt = document.getElementById('inputText').value;
+  // console.log(txt);
+  // getWeather(txt);
+  // const mainBox = document.getElementById('content-box');
+  // mainBox.remove();
+  // const newBox = document.createElement('div');
+  // newBox.setAttribute('class', 'flex-cont d-flex flex-column justify-content-center border');
+  // newBox.setAttribute('id', 'content-box');
+  // const head2 = document.createElement('h2');
+  // const heading = '<div class="heading text-center"><h2>Daily Weather</h2></div>';
+  // heading.appendChild(head2);
+  // newBox.innerHTML = heading;
+  // newBox.innerHTML = getWeather(txt);
+  // const content = document.getElementById('main-box');
+  // content.appendChild(newBox);
+  // content.innerHTML = heading;
+  // content.innerHTML = getWeather(txt);
 });
 
 // console.log(subButton);
 const defData = defaultDisplay();
-// const weather = locationWeather();
-
 defData();
 
 

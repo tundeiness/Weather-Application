@@ -10,35 +10,41 @@
   <title>Weather-Application</title>
 </head>
 <body>
-    <div class ="container-fluid main">
-        <div class="d-flex justify-content-center pt-5" id="main-box" >
-
-          <div class="flex-cont d-flex flex-column justify-content-center
-          border" id="content-box">
-            <div class="heading text-center"><h2>Daily Weather</h2></div>
-            <div class="icon-description d-flex flex-row justify-content-center">
-                <!-- <div class=" p-4 border" id="icon-item">Icon item 1</div> -->
-                <div class="p-4 mt-4" id="desc-item">Desc item 2</div>
-            </div>
-            <div class="temperature d-flex flex-column justify-content-center">
-                <div class="valTemp" id="temp-item">Flex item temperature</div>
-                <div class=" togContainer" id="toggle-item">
-                    <label class="switch ml-4">
-                        <input type="checkbox" id="togBtn">
-                        <div class="slider round" id='sliderId'><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div>
-                    </label>
+    <div class ="container-fluid main  ">
+      <div class="d-flex justify-content-center" id="cover">
+          <div class="d-flex justify-content-center flex-column pt-5 " id="main-box" >
+            <!-- display starts -->
+            <div class="d-flex flex-column justify-content-center" id="main-display">
+                <div class="flex-cont d-flex flex-column justify-content-center
+                border" id="content-box">
+                  <div class="heading text-center"><h2>Daily Weather</h2></div>
+                  <div class="icon-description d-flex flex-row justify-content-center">
+                      <!-- <div class=" p-4 border" id="icon-item">Icon item 1</div> -->
+                      <div class="p-4 mt-4" id="desc-item">Desc item 2</div>
+                  </div>
+                  <div class="temperature d-flex flex-column justify-content-center">
+                      <div class="valTemp" id="temp-item">Flex item temperature</div>
+                      <div class=" togContainer" id="toggle-item">
+                          <label class="switch ml-4">
+                              <input type="checkbox" id="togBtn">
+                              <div class="slider round" id='sliderId'><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="wind-humid d-flex flex-row justify-content-center">
+                      <div class="border windCont" id="wind-item">Flex item wind</div>
+                      <div class="border humidCont" id="humid-item">Flex item humidity</div>
+                  </div>
+                  <div class="location d-flex flex-row justify-content-center">
+                      <div class="locCont" id="loc-item">location</div>
+                  </div>
                 </div>
             </div>
-            <div class="wind-humid d-flex flex-row justify-content-center">
-                <div class="border windCont" id="wind-item">Flex item wind</div>
-                <div class="border humidCont" id="humid-item">Flex item humidity</div>
-            </div>
-            <div class="location d-flex flex-row justify-content-center">
-                <div class="locCont" id="loc-item">location</div>
-            </div>
-            <div class="search ">
+            <!-- display ends -->
+            <!-- controls starts -->
+            <div class="d-flex flex-column justify-content-center search " id='controls'>
               <form>
-                <div class="border d-flex flex-column justify-content-center" id="input-item">
+                <div class=" d-flex flex-column justify-content-center" id="input-item">
                   <div class="searchCont">
                     <input type='text' name = "input" placeholder="City name e.g Lusaka" id="inputText"/>
                   </div>
@@ -48,55 +54,9 @@
                 </div>
               </form>
             </div>
+            <!-- controls end -->
           </div>
-
-        </div>
-
-          <!-- <div class="col-lg-12" id='details'>
-            <span class="description"></span>
-            <span class="min-temp"></span>
-            <span class="max-temp"></span>
-          </div> -->
-          <!-- <div class="col-lg-12">
-            <div class="col-lg-6" id='toggle'>
-
-            </div>
-            <div class="col-lg-6"></div>
-          </div> -->
-          <!-- <div class="col-lg-12">
-            <div class="col-lg-12 d-flex">
-              <div class="text"></div>
-              <input type="text" placeholder="search your city">
-              <button></button>
-            </div>
-          </div> -->
-
-        <!-- <h1 class="title">DAILY WEATHER</h1>
-        <div class="area">
-          <img  src="https://image.ibb.co/hVg6C5/4_pin_flat.png">
-          <p class="state">...</p>
-        </div>
-
-        <div class="details">
-          <img class="icon" src="https://image.ibb.co/nEDNKk/1_cloud_cumulus_2.png">
-          <p class="describe">...</p>
-        </div>
-
-        <div class="temperature">
-          <span><p class="temp"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>
-  <span class="sr-only">Loading...</span></p></span>
-          <div class="buton">
-            <label class="switch">
-              <input type="checkbox" id="togBtn">
-              <div class="slider round"><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div>
-            </label>
-          </div>
-        </div> -->
-
-      <!-- <div class="credits">
-        <p>Powered By <a href="https://codepen.io/highness/pen/wqaQwN">@tundeiness</a></p>
-      </div> -->
-
+      </div>
     </div>
     <script  src='main.js'></script>
   <script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
