@@ -1,9 +1,4 @@
 const getSearch = () => {
-  // const searchContainer = document.createElement('div');
-  // searchContainer.setAttribute('class', 'search d-flex flex-column justify-content-center');
-  // searchContainer.setAttribute('id', 'controls');
-
-
   const formCont = document.createElement('form');
 
 

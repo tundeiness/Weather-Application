@@ -14,17 +14,52 @@
       <div class="d-flex justify-content-center" id="cover">
           <div class="d-flex justify-content-center flex-column pt-5 " id="main-box" >
             <!-- display starts -->
-            <div class="d-flex flex-column justify-content-center" id="main-display">
+            <div class="d-flex flex-column justify-content-center"
+            id="main-display">
+            <div class="flex-cont d-flex flex-column justify-content-center
+            border" id="content-box">
+              <div class="heading text-center"><h2>Daily Weather</h2></div>
+              <div class="icon-description d-flex flex-row justify-content-center">
+                  <!-- <div class=" p-4 border" id="icon-item">Icon item 1</div> -->
+                  <div class="p-4 mt-4" id="desc-item">Desc item 2</div>
+              </div>
+              <div class="temperature d-flex flex-column justify-content-center">
+                  <div class="valTemp" id="temp-item">Flex item temperature</div>
+                  <div class=" togContainer" id="toggle-item">
+                      <label class="switch ml-4">
+                          <input type="checkbox" id="togBtn">
+                          <div class="slider round"><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div>
+                      </label>
+                  </div>
+              </div>
+              <div class="wind-humid d-flex flex-row justify-content-center">
+                  <div class="border windCont" id="wind-item">Flex item wind</div>
+                  <div class="border humidCont" id="humid-item">Flex item humidity</div>
+              </div>
+              <div class="location d-flex flex-row justify-content-center">
+                  <div class="locCont" id="loc-item">location</div>
+              </div>
             </div>
             <!-- display ends -->
             <!-- controls starts -->
-            <div class="d-flex flex-column justify-content-center search " id='controls'>
+            <div class="d-flex flex-column justify-content-center search "
+            id='controls'>
+            <form>
+                <div class="border d-flex flex-column justify-content-center" id="input-item">
+                  <div class="searchCont">
+                    <input type='text' placeholder="City name e.g Lusaka" id="inputText"/>
+                  </div>
+                  <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                  </div>
+                </div>
+              </form>
             </div>
             <!-- controls end -->
           </div>
       </div>
     </div>
-    <script  src='main.js'></script>
+    <script  src='main.js' ></script>
   <script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

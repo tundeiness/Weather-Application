@@ -1,13 +1,25 @@
 import 'whatwg-fetch';
 import 'bootstrap';
-// import defaultDisplay from './defaultWeather';
+import defaultDisplay from './default';
+// import m from './metrics';
 // import getWeather from './getWeather';
 // import defaultDisplay from './default';
-import search from './searchForm';
+// import defaultDisplay, { init } from './default';
+// import search from './searchForm';
+// defaultDisplay();
+// const sear = search();
+const defaultView = defaultDisplay();
+// const mmm = m();
+// console.log(mmm);
+// mmm();
+// sear();
+// init();
+// console.log(init());
+defaultView();
 
-const sear = search();
+// console.log(defaultView());
+// console.log(defaultView());
 
-sear();
 // console.log(sear());
 
 // console.log(searchContainer);
