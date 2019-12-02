@@ -1,7 +1,8 @@
 
 import getVisualizer from './imgDepict';
 import toggleTemp from './toggleTemp';
-// import getWeatherDom from './metrics';
+import getWeatherDom from './metrics';
+import forms from './searchForm';
 
 // import domrender from './domInsertion';
 // import getMetrics from './renderMetrics';
@@ -29,19 +30,11 @@ const defaultData = () => {
       // flexCont.setAttribute('class', 'flex-cont d-flex flex-column justify-content-center border');
       // flexCont.setAttribute('id', 'content-box');
       // const contentBox = document.getElementById('content-box');
+      getWeatherDom(data);
 
-      // const heading = '<div class="heading text-center"><h2>Daily Weather</h2></div>';
-      // contentBox.innerHTML = heading;
-      // const iconDescription = document.createElement('div');
-      // iconDescription.setAttribute('class', 'icon-description d-flex flex-row justify-content-center');
-      const iconDescription = document.getElementById('icon-description');
-      // icon-description d-flex flex-row justify-content-center
-
-      // const descItem = document.getElementsByClassName('desc-item');
-      // descItem.setAttribute('class', 'p-4 mt-4');
-      // descItem.setAttribute('id', 'desc-item');
-      iconDescription.innerHTML = `<div class="p-4 mt-4" id="desc-item"><span class="font-weight-bold text-center" id="desc">${data.weather[0].main}</span>
-        <p class="font-weight-bold" id="fullDesc">${data.weather[0].description}</p></div>`;
+      // const iconDescription = document.getElementById('icon-description');
+      // iconDescription.innerHTML = `<div class="p-4 mt-4" id="desc-item"><span class="font-weight-bold text-center" id="desc">${data.weather[0].main}</span>
+      //   <p class="font-weight-bold" id="fullDesc">${data.weather[0].description}</p></div>`;
 
 
       // iconDescription.append(descItem);
@@ -52,11 +45,13 @@ const defaultData = () => {
       // const temperature = document.createElement('div');
       // temperature.setAttribute('class', 'temperature d-flex flex-column
       // justify-content-center');
-      const temperature = document.getElementById('temperature');
-      const cel = Math.round(parseFloat(data.main.temp - 273.15));
-      temperature.innerHTML = `<div class="valTemp" id="temp-item">
-      <p class="font-weight-bold text-center tempC" id="tempValueC">${cel}&degC</p>
-      </div><div class=" togContainer" id="toggle-item"><label class="switch ml-4"><input type="checkbox" id="togBtn"><div class="slider round"><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div></label></div>`;
+
+      // const temperature = document.getElementById('temperature');
+      // const cel = Math.round(parseFloat(data.main.temp - 273.15));
+      // temperature.innerHTML = `<div class="valTemp" id="temp-item">
+      // <p class="font-weight-bold text-center tempC" id="tempValueC">${cel}&degC</p>
+      // </div><div class=" togContainer" id="toggle-item"><label class="switch ml-4"><input type="checkbox" id="togBtn"><div class="slider round"><span class="F"><strong>F</strong></span><span class="C"><strong>C</strong></span></div></label></div>`;
+
       // const tempItem = document.getElementById('temp-item');
       // tempItem.setAttribute('class', 'valTemp');
       // tempItem.setAttribute('id', 'temp-item');
@@ -94,18 +89,15 @@ const defaultData = () => {
       // temperature.appendChild(toggleTemp(data));
 
 
-      const windHumid = document.getElementById('wind-humid');
-      // const windHumid = document.createElement('div');
-      // windHumid.setAttribute('class', 'wind-humid d-flex flex-row
-      // justify-content-center');
-      windHumid.innerHTML = `<div class="border windCont" id="wind-item">
-      <p class="font-weight-bold text-center" id="windText">wind</p><p class="covering">
-      <span class="font-weight-bold" id="windValue">${data.wind.speed} </span><span id='unit'>mph</span></p></div>
-      <div class="border humidCont" id="humid-item">
-      <p class="font-weight-bold text-center" id="humidText">humidity</p>
-      <p class="font-weight-bold text-center" id="humidValue">${data.main.humidity} %</p>
-      </div>
-      `;
+      // const windHumid = document.getElementById('wind-humid');
+      // windHumid.innerHTML = `<div class="border windCont" id="wind-item">
+      // <p class="font-weight-bold text-center" id="windText">wind</p><p class="covering">
+      // <span class="font-weight-bold" id="windValue">${data.wind.speed} </span><span id='unit'>mph</span></p></div>
+      // <div class="border humidCont" id="humid-item">
+      // <p class="font-weight-bold text-center" id="humidText">humidity</p>
+      // <p class="font-weight-bold text-center" id="humidValue">${data.main.humidity} %</p>
+      // </div>
+      // `;
       // const wind = document.getElementById('wind-item');
       // wind.setAttribute('class', 'border windCont');
       // wind.setAttribute('id', 'wind-item');
@@ -128,22 +120,18 @@ const defaultData = () => {
       // const location = document.createElement('div');
       // location.setAttribute('class', 'location d-flex flex-row justify-content-center');
 
-      const location = document.getElementById('location');
-      // const locCont = document.getElementById('loc-item');
-      // locCont.setAttribute('class', 'locCont');
-      // locCont.setAttribute('id', 'loc-item');
-
-      location.innerHTML = `<div class="locCont" id="loc-item">
-      <span class="font-weight-bold text-center" id="loc-name">${data.name}</span>
-      </div>`;
+      // const location = document.getElementById('location');
+      // location.innerHTML = `<div class="locCont" id="loc-item">
+      // <span class="font-weight-bold text-center" id="loc-name">${data.name}</span>
+      // </div>`;
       // locCont.innerHTML = `<span class="font-weight-bold text-center" id="loc-name">${data.name}</span>`;
       toggleTemp(data);
+      forms();
 
+      // const controls = document.getElementById('controls');
 
-      const controls = document.getElementById('controls');
-
-      controls.innerHTML = `<form><div class="border d-flex flex-column justify-content-center" id="input-item"><div class="searchCont"><input type='text' placeholder="City name e.g Lusaka" id="inputText"/></div><div class="submit"><input type="submit" value="Submit" id="submit"></div>
-      </div></form>`;
+      // controls.innerHTML = `<form><div class="border d-flex flex-column justify-content-center" id="input-item"><div class="searchCont"><input type='text' placeholder="City name e.g Lusaka" id="inputText"/></div><div class="submit"><input type="submit" value="Submit" id="submit"></div>
+      // </div></form>`;
 
 
       // location.appenChild(locCont);
