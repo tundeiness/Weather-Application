@@ -72,7 +72,7 @@ body {
 }
 
 
-.icon-description{
+#icon-description{
   border: 1px solid white;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -106,8 +106,11 @@ body {
   margin-top: 1rem;
 }
 
-.temperature{
+#temperature{
   border: 1px solid red;
+  width: auto;
+  border-radius: 5px;
+  margin: 0 1.5vw 0 1.5vw;
 }
 
 .valTemp{
@@ -144,7 +147,7 @@ body {
 }
 
 
-.wind-humid{
+#wind-humid{
   /* border: 1px solid whitesmoke; */
   margin-left: 1rem;
   margin-right: 1rem;
@@ -207,7 +210,7 @@ body {
   border-left: none !important;
 }
 
-.location{
+#location{
   border: 1px solid white;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -376,13 +379,13 @@ div .state {
 
 /*TEMPERATURE SECTION*/
 
-.temperature {
+/* .temperature {
   display: grid;
   grid-template-columns: 50% 50%;
   width: auto;
   border-radius: 5px;
   margin: 0 1.5vw 0 1.5vw;
-}
+} */
 
 .temperature > span {
   border-radius: 5px;
