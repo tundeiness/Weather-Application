@@ -1,15 +1,14 @@
+import city from './renderCity';
+
 const locationMetric = () => {
-  const AddTitle = (cityName) => {
-    const locCont = document.getElementById('loc-item');
-    locCont.innerHTML = `<span class="font-weight-bold text-center" id="loc-name">${cityName}</span>`;
-  };
+  const renderCity = city();
 
   const subButton = document.getElementById('submit');
-  subButton.addEventListener('click', (evnt) => {
-    const cityName = document.getElementById('inputText').value;
-    evnt.preventDefault();
-    AddTitle(cityName);
-    // renderData(cityname);
+  subButton.addEventListener('click', () => {
+    // const cityName = document.getElementById('inputText').value;
+    // evnt.preventDefault();
+
+    renderCity();
   });
 };
 
