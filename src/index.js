@@ -3,28 +3,53 @@ import 'bootstrap';
 import defaultDisplay from './default';
 
 
-//
+// //
 // const subButton = document.getElementById('submit');
 // subButton.addEventListener('click', (evnt) => {
-//   evnt.preventDefault();
-//   const view = locView();
-//   view(cityName);
+// evnt.preventDefault();
+
+// const cityName = document.getElementById('inputText').value.trim();
+// console.log(cityName);
+// const defaultView = defaultDisplay();
+// defaultDisplay();
 // });
+const defaultView = defaultDisplay();
+defaultView();
+// defaultDisplay();
+
 // console.log(cityName);
 // const view = render();
 // view();
-const cityName = document.getElementById('inputText').value;
-console.log(cityName);
+// const cityName = document.getElementById('inputText').value;
+// console.log(cityName);
 
-const defaultView = defaultDisplay();
-defaultView();
+
+// const defaultView = defaultDisplay();
+// defaultView();
+
+
+// function init() {
+//   document.getElementById('submit').addEventListener('click', () => {
+//     // evnt.preventDefault();
+
+//     const cityName = document.getElementById('inputText').value.trim();
+//     console.log(cityName);
+
+//   });
+// }
+
+// document.addEventListener('DOMContentLoaded', init);
+
+
+// const defaultView = defaultDisplay();
+// defaultView();
 
 // const subButton = document.getElementById('submit');
-// subButton.addEventListener('click', (evnt) => {
-//   evnt.preventDefault();
+// subButton.addEventListener('click', () => {
+// evnt.preventDefault();
 
-//   const cityName = document.getElementById('inputText');
-//   console.log(cityName.value);
+// const cityName = document.getElementById('inputText').value;
+// defaultView();
 // });
 
 

@@ -8,11 +8,9 @@ import getWeatherDom from './metrics';
 // import getMetrics from './renderMetrics';
 
 // const metrics = getMetrics();
-const defaultData = (cityName = 'london') => {
+const defaultData = (cityName = 'ireland') => {
   const APIKEY = '3f1649f8b9563002df71974391b99f2e';
-  // const cityName = 'london';
-  // const metrics = metric();
-  // const domView = domrender();
+
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${APIKEY}`;
   // https://api.openweathermap.org/data/2.5/weather?q=london&APPID=3f1649f8b9563002df71974391b99f2e

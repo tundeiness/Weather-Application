@@ -231,9 +231,6 @@ body {
   /* width: 25rem; */
 }
 
-/* #main-box{
-  width: 25rem;
-} */
 
 
 
@@ -254,7 +251,7 @@ input[type=text]{
   height: 2.5rem;
 }
 
-input[type=submit] {
+input[type=button] {
   background-color: powderblue;
   color: black;
   padding: 10px 10px;
@@ -266,7 +263,7 @@ input[type=submit] {
   margin-bottom: .5rem;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
   background-color: #2196F3;
 }
 
@@ -292,36 +289,8 @@ input[type=submit]:hover {
 
 
 
- /* .col-lg-4{
-  border: 1px solid white;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
-  padding: 8vh;
-}
-
-.row div:first-child{
-  border: none !important;
-}
 
 
-.row div:last-child{
-  border: none !important;
-}
-
- */
-
-
-
- /* .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1px;
-  grid-template-rows: 6em 11em 12em 9em 5em;
-
-  grid-gap: 7px;
-  background-color: #162131;
-  width: 100%;
-} */
 
 .title {
   text-align: center;
@@ -377,15 +346,7 @@ div .state {
   color: #EDDDD4;
 }
 
-/*TEMPERATURE SECTION*/
 
-/* .temperature {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: auto;
-  border-radius: 5px;
-  margin: 0 1.5vw 0 1.5vw;
-} */
 
 .temperature > span {
   border-radius: 5px;
