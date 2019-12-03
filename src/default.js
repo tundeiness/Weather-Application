@@ -8,9 +8,9 @@ import getWeatherDom from './metrics';
 // import getMetrics from './renderMetrics';
 
 // const metrics = getMetrics();
-const defaultData = () => {
+const defaultData = (cityName = 'london') => {
   const APIKEY = '3f1649f8b9563002df71974391b99f2e';
-  const cityName = 'london';
+  // const cityName = 'london';
   // const metrics = metric();
   // const domView = domrender();
 

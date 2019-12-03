@@ -13,18 +13,19 @@ import defaultDisplay from './default';
 // console.log(cityName);
 // const view = render();
 // view();
-
+const cityName = document.getElementById('inputText').value;
+console.log(cityName);
 
 const defaultView = defaultDisplay();
 defaultView();
 
-const subButton = document.getElementById('submit');
-subButton.addEventListener('click', (evnt) => {
-  evnt.preventDefault();
+// const subButton = document.getElementById('submit');
+// subButton.addEventListener('click', (evnt) => {
+//   evnt.preventDefault();
 
-  const cityName = document.getElementById('inputText');
-  console.log(cityName.value);
-});
+//   const cityName = document.getElementById('inputText');
+//   console.log(cityName.value);
+// });
 
 
 // const subButton = document.getElementById('submit');
