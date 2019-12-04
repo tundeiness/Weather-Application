@@ -11,7 +11,7 @@ import getWeatherDom from './metrics';
 // });
 
 
-const defaultData = (cityName = 'london') => {
+export default function defaultData(cityName = 'london') {
   const APIKEY = '3f1649f8b9563002df71974391b99f2e';
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${APIKEY}`;
@@ -32,7 +32,7 @@ const defaultData = (cityName = 'london') => {
     .catch((error) => {
       console.log(Error(error));
     });
-};
+}
 
 
-export default defaultData;
+// export default defaultData;

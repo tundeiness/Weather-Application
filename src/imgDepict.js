@@ -32,9 +32,9 @@ export default function getImage(data) {
     const obj = document.getElementById('content-box');
     obj.style.background = 'url(https://media.giphy.com/media/QPsEnRasf0Vfa/giphy.gif)';
     obj.style.backgroundSize = 'cover';
-  } else if (data.weather[0].main === 'Fog') {
+  } else if (data.weather[0].main === 'Fog' || data.weather[0].main === 'Haze') {
     const obj = document.getElementById('content-box');
-    obj.style.background = 'url(https://media.giphy.com/media/l3q2uVE4AB4YylwNG/giphy.gif)';
+    obj.style.background = 'url(https://media.giphy.com/media/iplVhhvRy4r3W/giphy.gif)';
     obj.style.backgroundSize = 'cover';
   } else {
     const obj = document.getElementById('content-box');

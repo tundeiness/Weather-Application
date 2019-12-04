@@ -6,15 +6,18 @@ import defaultDisplay from './default';
 // //
 // const defaultView = defaultDisplay();
 const subButton = document.getElementById('submit');
-const defaultView = defaultDisplay();
+// const defaultView = defaultDisplay();
 subButton.addEventListener('click', (evnt) => {
   // evnt.preventDefault();
 
   const cityName = document.getElementById('inputText').value.trim();
   // console.log(cityName);
 
-  defaultView(cityName);
+  // defaultView(cityName);
+  defaultDisplay(cityName);
 });
+
+defaultDisplay();
 // const defaultView = defaultDisplay();
 // defaultView();
 // defaultDisplay();
