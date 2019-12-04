@@ -25,9 +25,9 @@ const cityData = () => {
       toggleTemp(data);
       forms();
     })
-    .catch(
-      (err) => console.log(JSON.stringify(err)),
-    );
+    .catch((error) => {
+      console.log(Error(error));
+    });
 };
 
 
