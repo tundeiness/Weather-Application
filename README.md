@@ -28,7 +28,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<span align="center">
+<span style="display:block;text-align:center">
 ![Weather App Demo](https://github.com/tundeiness/Weather-Application/blob/feature/img/demo.gif)
 </span>
 
