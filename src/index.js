@@ -3,10 +3,7 @@ import 'bootstrap';
 import defaultDisplay from './default';
 
 
-// //
-// const defaultView = defaultDisplay();
 const subButton = document.getElementById('submit');
-// const defaultView = defaultDisplay();
 subButton.addEventListener('click', () => {
   // evnt.preventDefault();
 
@@ -16,6 +13,7 @@ subButton.addEventListener('click', () => {
   // defaultView(cityName);
   defaultDisplay(cityName);
   document.getElementById('inputText').value = ' ';
+  // document.getElementById('inline-notify').remove();
 });
 
 defaultDisplay();

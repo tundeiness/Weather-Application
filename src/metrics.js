@@ -1,7 +1,7 @@
 export default function getWeatherDom(data) {
   const iconDescription = document.getElementById('icon-description');
   iconDescription.innerHTML = `<div class="p-4 mt-4" id="desc-item"><span class="font-weight-bold text-center" id="desc">${data.weather[0].main}</span>
-    <p class="font-weight-bold" id="fullDesc">${data.weather[0].description}</p></div>`;
+    <p class="font-weight-bold text-center" id="fullDesc">${data.weather[0].description}</p></div>`;
 
   const temperature = document.getElementById('temperature');
   const cel = Math.round(parseFloat(data.main.temp - 273.15));
