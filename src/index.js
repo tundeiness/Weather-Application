@@ -7,7 +7,7 @@ import defaultDisplay from './default';
 // const defaultView = defaultDisplay();
 const subButton = document.getElementById('submit');
 // const defaultView = defaultDisplay();
-subButton.addEventListener('click', (evnt) => {
+subButton.addEventListener('click', () => {
   // evnt.preventDefault();
 
   const cityName = document.getElementById('inputText').value.trim();
@@ -15,6 +15,7 @@ subButton.addEventListener('click', (evnt) => {
 
   // defaultView(cityName);
   defaultDisplay(cityName);
+  document.getElementById('inputText').value = ' ';
 });
 
 defaultDisplay();

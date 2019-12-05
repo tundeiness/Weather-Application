@@ -36,9 +36,14 @@ export default function getImage(data) {
     const obj = document.getElementById('content-box');
     obj.style.background = 'url(https://media.giphy.com/media/iplVhhvRy4r3W/giphy.gif)';
     obj.style.backgroundSize = 'cover';
+  } else if (data.weather[0].main === 'Mist') {
+    const obj = document.getElementById('content-box');
+    obj.style.background = 'url(https://media.giphy.com/media/Ncc0kjzp7U1Ww/giphy.gif)';
+    obj.style.backgroundSize = 'cover';
   } else {
     const obj = document.getElementById('content-box');
     obj.style.background = 'url(https://media.giphy.com/media/u01ioCe6G8URG/giphy.gif)';
     obj.style.backgroundSize = 'cover';
   }
 }
+// https://media.giphy.com/media/Ncc0kjzp7U1Ww/giphy.gif
