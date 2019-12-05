@@ -2,6 +2,7 @@
 import getVisualizer from './imgDepict';
 import toggleTemp from './toggleTemp';
 import getWeatherDom from './metrics';
+import defError from './errorHandler';
 // import forms from './searchForm';
 
 
@@ -29,10 +30,11 @@ export default function defaultData(cityName = 'london') {
       toggleTemp(data);
       // forms();
     })
-    .catch((error) => {
-      console.log(Error(error));
+    .catch(() => {
+      // console.log(Error(error));
+      defError();
+      // const err = document.getElementById('inline-notify');
+      // err.innerHTML = `<p class="alert alert-warning" role="alert" >
+      // City not found!! </p>`;
     });
 }
-
-
-// export default defaultData;
