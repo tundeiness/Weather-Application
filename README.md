@@ -28,9 +28,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+<span align="center">
 ![Weather App Demo](https://github.com/tundeiness/Weather-Application/blob/feature/img/demo.gif)
-
+</span>
 
 
 The Weather App project tests my knowledge of asynchronous communication with
