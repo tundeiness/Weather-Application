@@ -36,7 +36,7 @@
 The Weather App project tests my knowledge of asynchronous communication with
 promises or async/await and when to use them. This app allows users to search
 for a specific location and toggle temperature display from Fahrenheit
-to Celsius or vice versa.
+to Celsius and vice versa.
 
 
 ### Built With

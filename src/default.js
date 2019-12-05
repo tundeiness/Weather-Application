@@ -15,7 +15,7 @@ export default function defaultData(cityName = 'london') {
     method: 'GET',
     mode: 'cors',
     headers,
-  }).then((resp) => resp.json())
+  }).then((resp) => { resp.json(); })
     .then((data) => {
       getVisualizer(data);
       getWeatherDom(data);
