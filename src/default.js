@@ -11,7 +11,6 @@ export default function defaultData(cityName = 'london') {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${APIKEY}`;
   const headers = new Headers();
-  console.log(cityName);
   fetch(url, {
     method: 'GET',
     mode: 'cors',
