@@ -1,3 +1,4 @@
+/* eslint arrow-parens: ["error", "as-needed"] */
 
 import getVisualizer from './imgDepict';
 import toggleTemp from './toggleTemp';
@@ -15,8 +16,8 @@ export default function defaultData(cityName = 'london') {
     method: 'GET',
     mode: 'cors',
     headers,
-  }).then((resp) => resp.json())
-    .then((data) => {
+  }).then(resp => resp.json())
+    .then(data => {
       getVisualizer(data);
       getWeatherDom(data);
       toggleTemp(data);
