@@ -29,7 +29,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Weather App Demo](https://github.com/tundeiness/Weather-Application/blob/feature/img/demo.gif)
+![Weather App Demo](https://user-images.githubusercontent.com/25479050/70306195-78932100-1806-11ea-9072-0a9df7a73239.gif)
 
 
 
